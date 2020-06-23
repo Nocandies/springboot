@@ -32,6 +32,7 @@ public class MybatisController {
     @PostMapping("/deletestu")
     public List<Student> deleteStu(@RequestParam("id") Integer id){
         studentService.deleteStuById(id);
+
         return studentService.findAllStu();
     }
     @PostMapping("/deletestuerror")
